@@ -1,0 +1,21 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "ma",
+  "main": "vinext/server/fetch-handler",
+  // Production date. The locally installed workerd (1.20260515) refuses it, so `pnpm dev` (vite.config.ts) and `pnpm start`
+  // (package.json) override it with LOCAL_COMPATIBILITY_DATE; tests/dev-config.test.mjs keeps the three in step.
+  "compatibility_date": "2026-09-25",
+  "compatibility_flags": ["nodejs_compat"],
+  "ai": {"binding": "AI"},
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "ma-db",
+      "database_id": "d463d4db-3b93-4414-95ae-d86eb4f5aa81",
+      "migrations_dir": "drizzle"
+    }
+  ],
+  "observability": {
+    "enabled": true
+  }
+}

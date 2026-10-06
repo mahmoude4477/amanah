@@ -1,0 +1,4 @@
+# Keep upstream Tanzil XML bytes and copyright notices verbatim.
+vendor/quran-*.xml -text -diff
+# The team's AMANAH helper is a verbatim copy (integration-cloudflare.ts); tests/amanah-ai.test.mjs pins its bytes.
+lib/server/amanah-ml-integration.ts -text
